@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-color-roll: color-roll 3s linear infinite reverse;
+  --animate-marquee: marquee 20s linear infinite;
+}
+
+@keyframes color-roll {
+  to { background-position: 250% 0; }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
