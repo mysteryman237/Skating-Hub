@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+html { scrollbar-width: none; } 
+html::-webkit-scrollbar { display: none; }
 @theme {
   --animate-color-roll: color-roll 3s linear infinite reverse;
   --animate-marquee: marquee 20s linear infinite;

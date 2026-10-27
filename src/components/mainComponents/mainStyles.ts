@@ -1,10 +1,10 @@
 
 export const mainStyle = {
-  main: `relative pt-[5rem]`,
+  main: `relative pt-[58px]`,
   herSecOverlay: 'absolute inset-x-0 bottom-0  bg-linear-to-b from-transparent via-slate-90/50 to-slate-900',
   priceSecOverlay:`pointer-events-none absolute inset-0 z-5
    bg-linear-to-b from-slate-900 via-slate-900/50 to-transparent h-40`,
-  overLay: 'w-full h-full fixed inset-x-0 top-20 z-0 duration-500 bg-slate-900 md:hidden'
+  overLay: 'w-full h-full fixed inset-x-0 top-10 z-0 duration-500 bg-slate-900 md:hidden'
 } as const
 
 export const heroStyles = {

@@ -19,9 +19,9 @@ function App() {
       />
       <main className={mainStyle.main}>
         <HeroSection />
-        <PriceSection />
+        <PriceSection /> 
       </main>
-      <Footer />
+      <Footer /> 
       {menuOpen && (
         <div
           className={mainStyle.overLay}

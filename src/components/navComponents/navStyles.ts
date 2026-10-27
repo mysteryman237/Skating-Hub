@@ -1,6 +1,6 @@
 
 export const navStyles = {
-    nav: `h-[80px] p-[10px] flex justify-between text-indigo-200 items-center
+    nav: `h-[60px] p-[10px] flex justify-between text-indigo-200 items-center  rounded-4 
      fixed inset-x-0 top-0 w-full z-30 bg-slate-900/80 backdrop-blur-md border-b border-white/10 text-slate-200`,
     logoContainer: 'flex gap-[1rem] justify-around items-center',
     logoText: 'font-[800] bg-linear-to-r from-rose-300 to-rose-400 text-transparent bg-clip-text animate-color-roll',
