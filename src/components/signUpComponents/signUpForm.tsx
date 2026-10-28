@@ -21,7 +21,7 @@ const schema = z.object({
 type SignUpFormData = z.infer<typeof schema>
 
 function SignUpForm(){
-    const {register, handleSubmit, reset, formState: {errors}} = useForm<SignUpFormData>({
+    const {register, handleSubmit, reset, formState: {errors, isSubmitting}} = useForm<SignUpFormData>({
         resolver: zodResolver(schema),
         defaultValues: {terms: false}
     })
@@ -70,7 +70,7 @@ return (
           </span>
        </label>
        {errors.terms && <p role="alert" id="term-error" className={formStyles.alert}>{errors.terms.message}</p>}
-        <button type="submit" className={formStyles.submitBtn}>Sign Up</button>
+        <button type="submit" className={formStyles.submitBtn} disabled={isSubmitting}>Sign Up</button>
     </form>
 )
 }

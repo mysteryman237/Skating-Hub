@@ -8,7 +8,7 @@ export const signUpStyle = {
 export const formStyles = {
   form: `rounded-4xl flex flex-col items-center justify-center px-6 bg-white md:order-2`,
   title: `text-xl font-bold text-slate-900`,
-  inputs: `p-2 md:p-3 border-b border-gray-300 font-semibold text-slate-800 w-full focus:bg-blue-50 focus:border-b-2 focus:border-blue-600 outline-none`,
+  inputs: `p-2 md:p-3 border-b border-gray-300 font-semibold text-slate-800 w-full bg-blue-50 focus:border-b-2 focus:border-blue-600 outline-none`,
   termsContainer: `flex items-center gap-2 m-2`,
   termsPara: `text-slate-600`,
   submitBtn: `bg-linear-to-r from-[#8A9FFC] to-blue-800 text-white font-semibold m-2 
