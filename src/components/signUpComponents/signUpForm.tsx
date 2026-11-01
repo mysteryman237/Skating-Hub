@@ -3,6 +3,7 @@ import InputField from "./inputField"
 import z  from 'zod'
 import {useForm} from 'react-hook-form'
 import { zodResolver } from "@hookform/resolvers/zod"
+import { useNavigate } from "react-router-dom"
 
 /* Create this schema for data shape using zod object */
 const schema = z.object({
@@ -21,6 +22,8 @@ const schema = z.object({
 type SignUpFormData = z.infer<typeof schema>
 
 function SignUpForm(){
+    const navigate = useNavigate()
+
     const {register, handleSubmit, reset, formState: {errors, isSubmitting}} = useForm<SignUpFormData>({
         resolver: zodResolver(schema),
         defaultValues: {terms: false}
@@ -28,6 +31,8 @@ function SignUpForm(){
 return (
     <form  className={formStyles.form} noValidate onSubmit={handleSubmit(data => {
         console.log(data)
+       navigate("/NewAccountConfirmation")
+
         reset()
     })}>
         <h1 className={formStyles.title}>Create Account</h1>

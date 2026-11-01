@@ -3,6 +3,7 @@ import { formStyles } from "./signInStyles";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import InputField from "../signUpComponents/inputField";
+import { useNavigate } from "react-router-dom";
 
 const schema = z.object({
   email: z.email({ error: "Enter a valid email" }).max(50),
@@ -10,10 +11,14 @@ const schema = z.object({
 });
 type SignInData = z.infer<typeof schema>;
 function SignInForm() {
+  const navigate = useNavigate()
   const {register, handleSubmit, formState: { errors, isSubmitting }} = useForm<SignInData>({ resolver: zodResolver(schema) });
 
   return (
-    <form noValidate className={formStyles.form} onSubmit={handleSubmit((data) => console.log(data))}>
+    <form noValidate className={formStyles.form} onSubmit={handleSubmit((data) =>{
+       alert("Log in Succesfull")
+       navigate("/")
+       })}>
      
       <h1 className={formStyles.title}>Sign In</h1>
     <InputField {...register("email")} label="Email" type="email" autoComplete="email" id="email"

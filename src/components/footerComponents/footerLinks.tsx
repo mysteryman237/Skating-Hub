@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom"
 
 interface LinksShape{
     label: string,
-    href: string
+    to: string
 }
 interface LinksProp{
     links: LinksShape[],
@@ -16,8 +17,8 @@ interface LinksProp{
         <nav aria-label="Quick link">
           <h2 className={headingClass}>{title}</h2>
           <ul className={listClass}>
-            {links.map(link => <li key={link.href}>
-                <a href={link.href}>{link.label}</a>
+            {links.map(link => <li key={link.to}>
+                <Link to={link.to}>{link.label}</Link>
             </li>)}
             </ul>
         </nav>

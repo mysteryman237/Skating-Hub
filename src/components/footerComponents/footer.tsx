@@ -4,18 +4,19 @@ import { FaYoutube } from "react-icons/fa";
 import { footerStyle } from "./footerStyles";
 import FooterLinks from "./footerLinks";
 import PartnersLogo from "./partnersLogo";
+import { Link } from "react-router-dom";
 
 const quickLinks = [
-    {label: "Home", href: "#home"},
-    {label: "About", href: "#about"},
-    {label: "Blog", href: "#blog"},
-    {label: "Profile", href: "#profile"}
+    {label: "Home", to: "/"},
+    {label: "About", to: "/About"},
+    {label: "Blog", to: "/Blog"},
+    {label: "Profile", to: "/Profile"}
 ]
 const contactLinks = [
-    {label: "Email", href: "#mail"},
-    {label: "Support", href: "#Support"},
-    {label: "Location", href: "#location"},
-    {label: "Call", href: "#call"}
+    {label: "Email", to: "/#Mail"},
+    {label: "Support", to: "/#Support"},
+    {label: "Location", to: "/#Location"},
+    {label: "Call", to: "/#Call"}
 ]
 function Footer(){
    const year = new Date().getFullYear()
@@ -31,7 +32,7 @@ function Footer(){
                 <nav aria-label="Social media">
                     <h2 className={footerStyle.headings}>Social Media</h2>
                     <ul className={footerStyle.footerList}>
-                   <li> <a href="#"> <FaFacebook color="blue" size="30px" aria-label="Facebook"/></a> </li>
+                   <li> <Link to="http://skatersworld.ae"> <FaFacebook color="blue" size="30px" aria-label="Facebook"/></Link> </li>
                    <li> <a href="#"> <FaYoutube color="red" size="30px" aria-label="Youtube"/></a> </li>
                    <li> <a href="#"> <FaInstagram color="brown" size="30px" aria-label="Instagram"/></a> </li>
                     </ul>

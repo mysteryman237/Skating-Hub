@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { heroStyles, mainStyle } from "./mainStyles"
 
 function HeroSection(){
@@ -9,7 +10,7 @@ return(
             <span className={heroStyles.headingSpan}> SNOW<span className={heroStyles.nameStyle}>M.I.A</span></span> <br/> 
             skate with confidence</h1>
         <p className={heroStyles.subtitle}>Structured training for beginners and advanced skaters, classes available for all age group <br/> four years and above</p>
-       <button className={heroStyles.heroBtn}>Book a free session</button>
+       <Link to="/SignUp" className={heroStyles.heroBtn}>Get Started</Link>
       {/* <div className={mainStyle.herSecOverlay}></div> */}
     </section>
 )

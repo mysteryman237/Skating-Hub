@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface AuthButtonProps{
     containerClass: string,
     loginClass: string,
@@ -8,12 +10,12 @@ interface AuthButtonProps{
 function AuthButtons({containerClass, loginClass, signUpClass, onAction}:AuthButtonProps) {
   return (
     <div className={containerClass}>
-      <button type="button" className={loginClass} onClick={onAction}>
+      <Link to="/SignIn" type="button" className={loginClass} onClick={onAction}>
         Log in
-      </button>
-      <button type="button" className={signUpClass} onClick={onAction}>
+      </Link>
+      <Link to="/SignUp" type="button" className={signUpClass} onClick={onAction}>
         sign-up
-      </button>
+      </Link>
     </div>
   );
 }

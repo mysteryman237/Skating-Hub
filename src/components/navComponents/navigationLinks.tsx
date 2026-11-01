@@ -1,7 +1,9 @@
+import { NavLink } from "react-router-dom";
+
 const links = [
-  {label: "Home", href: "#home"},
-  {label: "Contact", href: "#contact"},
-  {label: "About", href: "#about"}
+  {label: "Home", to: "/"},
+  {label: "Contact", to: "/contact"},
+  {label: "About", to: "/about"}
 ]
 
 interface NavProp{
@@ -12,8 +14,11 @@ interface NavProp{
 function NavigationLinks({listClass, onNavigate}:NavProp) {
   return (
      <ul className={listClass}>
-     {links.map(({label, href}) => <li key={href}>
-      <a href={href} onClick={onNavigate}>{label}</a>
+     {links.map(({label, to}) => <li key={to}>
+      <NavLink to={to} end={to === "/"}
+             className={({isActive}) => isActive ? "text-white border-b-2 border-white"
+                                     : "text-slate-300 hover:text-white border-b-2 border-transparent" }
+               onClick={onNavigate}>{label}</NavLink>
      </li>)}
      </ul>
   );

@@ -15,7 +15,7 @@ function SignInCard(){
                     Learn From World's<br/> Best Instructor{" "}
                     <TbWorldHeart size={34} color="amber-400" className={formCardStyles.icon} aria-hidden="true"/>
                     <br/> Around The World.</h2>
-                <img src="/images/skate_transparent2.webp" alt="Roller Skate" className={formCardStyles.image}/>
+                <img src="/images/iceSkate1.webp" alt="Roller Skate" className={formCardStyles.image}/>
             </div>
         </article>
     )
