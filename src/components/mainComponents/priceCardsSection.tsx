@@ -7,7 +7,6 @@ function PriceSection(){
 
     return(
        <section className={priceSection.section}>
-      {/* <div className={mainStyle.priceSecOverlay}></div> */}
         <img src="/images/kids.webp" alt="Street skate" loading="lazy" className={priceSection.image} />
         <div className={priceSection.overLay}></div>
        <header className={priceSection.header}>

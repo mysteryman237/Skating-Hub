@@ -1,5 +1,6 @@
 import { LiaHandPointRightSolid } from "react-icons/lia"
 import { cardStyles } from "./mainStyles"
+import { Link } from "react-router-dom"
 
 interface CardProp{
    carddata: { title: string,
@@ -26,7 +27,7 @@ return (
                         <p className={cardStyles.priceDuration}><span className={cardStyles.planPrice}>{carddata.price}AED</span >{carddata.priceDuration}</p>
                     </div>
                     <p className={cardStyles.planDes}>{carddata.description}</p>
-                    <button className={cardStyles.priceBtn}>{carddata.buttonText}</button>
+                    <Link className={cardStyles.priceBtn} to={"/Request"}>{carddata.buttonText}</Link>
                 </div>
                 <footer>
                     <h4>{carddata.features}</h4>

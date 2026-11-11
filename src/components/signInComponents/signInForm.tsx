@@ -3,7 +3,7 @@ import { formStyles } from "./signInStyles";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import InputField from "../signUpComponents/inputField";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const schema = z.object({
   email: z.email({ error: "Enter a valid email" }).max(50),
@@ -21,16 +21,16 @@ function SignInForm() {
        })}>
      
       <h1 className={formStyles.title}>Sign In</h1>
-    <InputField {...register("email")} label="Email" type="email" autoComplete="email" id="email"
+    <InputField {...register("email")} label="Email" type="email" autoComplete="email" id="email" className={formStyles.inputs}
      aria-invalid={!! errors.email} aria-describedby={errors.email ? "email-error" : undefined}/>
      {errors.email && <p id="email-error" role="alert" className={formStyles.errorText}>{errors.email.message}</p>}
 
-    <InputField {...register("password")} label="Password" type="password" autoComplete="current-password" 
+    <InputField {...register("password")} label="Password" type="password" autoComplete="current-password" className={formStyles.inputs} 
     aria-invalid={!! errors.password} aria-describedby={errors.password ? "password-error" : undefined}/>
     {errors.password && <p id="password-error" role="alert" className={formStyles.errorText}>{errors.password.message}</p>}
 
     <div className="flex justify-between w-full p-4 flex-wrap gap-2 font-semibold">
-      <p>Don't have an account ? <a href="#" className={formStyles.passwordLinks}>Sign Up</a> </p>
+      <p>Don't have an account ? <Link to="/SignUp" className={formStyles.passwordLinks}>Sign Up</Link> </p>
       <a href="#" className={formStyles.passwordLinks}>Forgot password</a>
     </div>
    

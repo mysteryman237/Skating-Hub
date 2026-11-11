@@ -3,7 +3,7 @@ import InputField from "./inputField"
 import z  from 'zod'
 import {useForm} from 'react-hook-form'
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 /* Create this schema for data shape using zod object */
 const schema = z.object({
@@ -40,27 +40,27 @@ return (
         {/* we use our InputFied component to create all the necessary inputs. Note that our labels
         have the aria-hidden attribute because we don't want to display the labels as per design requirements
         but screen readers can read them */}
-        <InputField {...register('fullName')} type="text" id="fullName" label="Full Name" 
+        <InputField {...register('fullName')} type="text" id="fullName" label="Full Name" className={formStyles.inputs} 
         autoComplete="fullName" aria-invalid={!! errors.fullName} aria-describedby="fullName-error" />
         {errors.fullName && 
         <p role="alert" id="fullName-error" className={formStyles.alert}>{errors.fullName.message}</p>}
 
-        <InputField {...register('email')} type="email" id="email" label="Email"
+        <InputField {...register('email')} type="email" id="email" label="Email" className={formStyles.inputs}
          autoComplete="email" aria-describedby="email-error" aria-invalid={!! errors.email}/>
         {errors.email && 
         <p role="alert" id="email-error" className={formStyles.alert}>{errors.email.message}</p>}
 
-        <InputField {...register('phone')} type="tel" id="phone" label="Phone Number"
+        <InputField {...register('phone')} type="tel" id="phone" label="Phone Number" className={formStyles.inputs}
          autoComplete="tel" aria-invalid={!! errors.phone} aria-describedby="phone-error"/>
         {errors.phone && 
         <p role="alert" id="phone-error" className={formStyles.alert}>{errors.phone.message}</p>}
 
-        <InputField {...register('password')} type="password" id="password" label="Password"
+        <InputField {...register('password')} type="password" id="password" label="Password" className={formStyles.inputs}
          autoComplete="new-password" aria-invalid={!! errors.password} aria-describedby="password-error"/>
         {errors.password &&
          <p role="alert" id="password-error" className={formStyles.alert}>{errors.password.message}</p>}
 
-        <InputField {...register('confirmPassword')} type="password" id="confirmPassword" 
+        <InputField {...register('confirmPassword')} type="password" id="confirmPassword" className={formStyles.inputs}
         label="Confirm Password" autoComplete="new-password" aria-invalid={!! errors.confirmPassword}
          aria-describedby="confirmPassword-error"/>
         {errors.confirmPassword && 
@@ -70,8 +70,8 @@ return (
         <label className={formStyles.termsContainer}>
           <input {...register('terms')} type="checkbox" aria-describedby="terms-error"/>
          <span className={formStyles.termsPara}>
-            I agree to the <a href="/terms" className="underline">Terms of Service</a> and{" "}
-          <a href="/privacy" className="underline">Privacy Policy</a>
+            I agree to the <Link to="/terms" className="underline">Terms of Service</Link> and{" "}
+          <Link to="/privacy" className="underline">Privacy Policy</Link>
           </span>
        </label>
        {errors.terms && <p role="alert" id="term-error" className={formStyles.alert}>{errors.terms.message}</p>}

@@ -9,12 +9,12 @@ export const signInStyle = {
 export const formStyles = {
     form: `rounded-4xl flex flex-col items-center justify-center px-6 md:order-2 max-w-xl  z-10`,
      title: `text-2xl font-bold text-slate-900`,
-       inputs: `py-2 md:py-4 px-8 font-bold text-slate-900 w-full rounded-[20px]  bg-white/25 border border-white/50
+    inputs: `py-2 md:py-4 px-8 font-bold text-slate-900 w-full rounded-[20px]  bg-white/25 border border-white/50
                shadow-[0_4px_12px_rgba(11,37,69,0.15)] focus:shadow-[0_0_0_3px_rgba(0,119,255,0.35)] 
                outline-none transition placeholder:text-[#0B2545]/70`,
     submitBtn: `w-full md:w-[60%] py-3 rounded-full font-semibold text-white bg-gradient-to-br from-[#1E88FF] to-[#0A3FA8]
-    shadow-[0_6px_20px_rgba(10,63,168,0.45)] transition hover:from-[#0A5BD8] hover:to-[#0847A8] m-4
-    active:scale-[0.98] cursor-pointer`,
+               shadow-[0_6px_20px_rgba(10,63,168,0.45)] transition hover:from-[#0A5BD8] hover:to-[#0847A8] m-4
+                active:scale-[0.98] cursor-pointer`,
      errorText: "text-sm text-red-600",
      passwordLinks: `text-blue-600 hover:border-blue-600 border-b-2 border-transparent`
 } as const

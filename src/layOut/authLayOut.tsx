@@ -16,7 +16,7 @@ return(
     <main className="min-h-dvh relative overflow-hidden">
         < Outlet />
     </main>
-    <img src="/images/snowBG.webp" width="1920px" alt="a wall of snow"  aria-hidden="true"
+    <img src="/images/snowBG.webp" width="1920px" alt="a wall of snow" aria-hidden="true"
     className="fixed inset-0 h-full w-full object-cover -z-10" />
     </>
 )
