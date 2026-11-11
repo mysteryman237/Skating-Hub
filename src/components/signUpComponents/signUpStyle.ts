@@ -15,8 +15,8 @@ export const formStyles = {
   termsContainer: `flex items-center gap-2 m-2`,
   termsPara: `text-slate-900`,
   submitBtn: `w-full md:w-[60%] py-3 rounded-full font-semibold text-white bg-gradient-to-br from-[#1E88FF] to-[#0A3FA8]
-    shadow-[0_6px_20px_rgba(10,63,168,0.45)] transition hover:from-[#0A5BD8] hover:to-[#0847A8] m-4
-    active:scale-[0.98] cursor-pointer`,
+              shadow-[0_6px_20px_rgba(10,63,168,0.45)] transition hover:from-[#0A5BD8] hover:to-[#0847A8] m-4
+              active:scale-[0.98] cursor-pointer`,
    alert: `text-sm text-red-600`
 } as const
 

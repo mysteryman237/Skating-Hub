@@ -48,3 +48,14 @@ export const cardStore = [
     bgColor: 'bg-indigo-300/65'
   }
 ];
+export const relationship = [
+  {name: "parent", label: "Parent"},
+  {name: "sponsor", label: "Sponsor"},
+  {name: "student", label: "I'm the student"}
+] as const
+export const guardian = ["parent", "sponsor", "student"] as const
+export const medicalConditions = [
+  {name: "boneFracture", label: "Bone fracture"},
+  {name: "allergy", label: "Allergy"},
+  {name: "asthmatic", label: "Asthmatic"}
+] as const
